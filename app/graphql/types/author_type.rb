@@ -13,4 +13,6 @@ class Types::AuthorType < Types::BaseObject
   def backwards_name
     "#{object.last_name}, #{object.first_name}"
   end
+
+  field :coordinates, Types::CoordinatesType, null: false
 end
