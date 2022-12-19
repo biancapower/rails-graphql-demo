@@ -16,3 +16,14 @@ class Types::AuthorType < Types::BaseObject
 
   field :coordinates, Types::CoordinatesType, null: false
 end
+
+# AuthorInputType
+class Types::AuthorInputType < GraphQL::Schema::InputObject
+  graphql_name "AuthorInputType"
+
+  description "Properties for creating an author"
+  argument :first_name, String, required: true
+  argument :last_name, String, required: true
+  argument :yob, Integer, required: true
+  argument :is_alive, Boolean, required: true
+end
